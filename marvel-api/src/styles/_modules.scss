@@ -1,0 +1,118 @@
+.input {
+  border: 2px solid #00308F;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px #00BFFF;
+  color: #1A1110;
+  font-size: 14px;
+  padding: 15px 20px;
+  font-family: 'Bree Serif', serif;
+
+  &:focus-visible {
+    outline: 1px solid #180304;
+    box-shadow: 1px 1px 5px #C51117;
+    color: #777777;
+  }
+
+  &-wrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.img {
+  width: 223px;
+  box-shadow: 2px 2px 10px #020024;
+  filter: grayscale(43%) brightness(114%) saturate(168%) contrast(120%);
+  border: 2px solid #180304;
+
+  &__modal {
+    min-width: 300px;
+    min-height: 324px;
+  }
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &__overlay {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 1200px;
+    background: #fff;
+    padding: 46px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 0px 12px 6px rgb(0 0 0 / 30%);
+    background: url(../img/modal_bg.jpg) no-repeat center/100%;
+
+    &-img {
+      background: url(../img/default_img.jpg) no-repeat center/100% #fff;
+      border: 2px thick double rgba(197,17,23,0.4);
+      border-radius: 10px;
+      box-shadow: 0px 0px 30px 3px #C51117;
+      min-width: 300px;
+      min-height: 450px;
+      max-width: 300px;
+      width: 100%;
+      color: #fff;
+    }
+  }
+
+  &__btn-close {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 32px;
+    color: #fff;
+  }
+
+  &__descr {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__title {
+    font-size: 40px;
+    text-shadow: 0px 0px 0 rgb(212,210,228),1px 0px 0 rgb(185,183,201),2px 0px 0 rgb(158,156,174),3px 0px 0 rgb(131,129,147),4px 0px 0 rgb(104,102,120),5px 0px 0 rgb(77,75,93),6px 0px 0 rgb(50,48,66),7px 0px  0 rgb(23,21,39),8px 0px 7px rgba(0,0,0,0.4),8px 0px 1px rgba(0,0,0,0.5),0px 0px 7px rgba(0,0,0,.2);    color: #efedff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #efedff;
+
+  }
+
+  &__story {
+    color: #efedff;
+  }
+
+  &__list {
+    display: flex;
+  }
+}

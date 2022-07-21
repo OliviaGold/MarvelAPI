@@ -1,0 +1,33 @@
+.header {
+  background-color: #242124;
+  padding: 20px 100px;
+  box-shadow: 0px 4px 5px #760E12;
+  z-index: 2;
+}
+
+.logo {
+  width: 220px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  &__list {
+    display: flex;
+    gap: 15%;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #FDE8E9;
+
+    &:hover {
+      color: #C51117;
+      text-shadow: 2px 1px 3px #EC1D24;
+    }
+  }
+}
