@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "./Modal";
 
-class Card extends React.Component {
+class CardCharacters extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -20,7 +20,7 @@ class Card extends React.Component {
   componentDidUpdate() {
     if (this.state.open) {
       document.body.style.overflow = 'hidden';
-    } else {
+    } else{
       document.body.style.overflow = '';
     }
   }
@@ -57,4 +57,4 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+export default CardCharacters;

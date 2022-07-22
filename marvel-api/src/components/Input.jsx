@@ -7,7 +7,7 @@ class Input extends React.Component {
     return (
       <div className="input-wrapper">
         <label>{label}</label>
-        <input className="input" name={name} value={value} onChange={onChange} placeholder="Type a name of the character here..."/>
+        <input className="input" name={name} value={value} onChange={onChange} placeholder="Type a name here..."/>
       </div>
     )
   }

@@ -1,0 +1,47 @@
+@media screen and (max-width: 640px) {
+  .popup {
+    &__content {
+      &-img {
+        min-width: 216px;
+        min-height: 324px;
+        height: 225px;
+        width: 0%;
+        justify-content: center;
+      }
+    }
+
+    &__descr {
+      flex-direction: column;
+      justify-content: center;
+      overflow: visible;
+
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__li {
+      display: none;
+    }
+
+    &__btn-close {
+      top: 5px;
+      right: 5px;
+      font-size: 30px;
+    }
+  }
+
+  .wrapper {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  label {
+    text-align: center;
+  }
+}

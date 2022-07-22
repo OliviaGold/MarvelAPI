@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import CardCharacters from "./CardCharacters";
+import CardComics from "./CardComics";
 import { Spinner } from 'react-bootstrap';
 
-const Characters = ({value}) => {
+const Comics = ({value}) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -10,7 +10,7 @@ const Characters = ({value}) => {
     setLoading({loading:true})
 
     if (value === '') {
-      fetch(`https://gateway.marvel.com:443/v1/public/characters?limit=47&ts=1&apikey=da17266bf2856e24a89069d032b48441&hash=4b616dd65d3201a7d0c38461bf331e60`)
+      fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&ts=1&apikey=da17266bf2856e24a89069d032b48441&hash=4b616dd65d3201a7d0c38461bf331e60`)
         .then(response => response.json())
         .then(data => {
           setData(data)
@@ -18,7 +18,7 @@ const Characters = ({value}) => {
         })
         .then(console.log(data))
       } else {
-      fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${value}&ts=1&apikey=da17266bf2856e24a89069d032b48441&hash=4b616dd65d3201a7d0c38461bf331e60`)
+      fetch(`https://gateway.marvel.com:443/v1/public/comics?limit=100&titleStartsWith=${value}&ts=1&apikey=da17266bf2856e24a89069d032b48441&hash=4b616dd65d3201a7d0c38461bf331e60`)
       .then(response => response.json())
       .then(data => {
         setData(data)
@@ -36,12 +36,11 @@ const Characters = ({value}) => {
       ) : (
         <div className="card">{
           data.data && data.data.results.map(result => ( 
-            <CardCharacters
+            <CardComics
               key={result.id}
-              character={result.name}
+              comics={result.title}
               img={result.thumbnail.path} 
-              text={result.description}
-              series={result.comics.items}
+              description={result.description}
             />
           ))
         }
@@ -57,4 +56,4 @@ const Characters = ({value}) => {
   }
 }
 
-export default Characters;
+export default Comics;

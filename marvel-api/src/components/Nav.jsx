@@ -1,14 +1,16 @@
+import { NavLink } from "react-router-dom"
+
 const navItems = [
-  { label: 'Characters', path: '' },
-  { label: 'Comics', path: '' }
+  { label: 'Characters', path: '/characters' },
+  { label: 'Comics', path: '/comics' }
 ]
 
 const NavItem = ({ children, path }) => {
   return (
     <li className="navigation__list-item">
-      <a className="navigation__link" href={path}>
+      <NavLink className="navigation__link" to={path}>
         {children}
-      </a>
+      </NavLink>
     </li>
   )
 }

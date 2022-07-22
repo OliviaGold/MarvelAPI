@@ -1,0 +1,21 @@
+.homepage {
+  position: relative;
+
+  &__img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 3px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 150%;
+    text-shadow: 3px 2px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #C51117;
+  }
+}

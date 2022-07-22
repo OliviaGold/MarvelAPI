@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Characters from '../components/Characters';
 import Input from '../components/Input';
 
-class Main extends React.Component {
+class CharactersPage extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -28,4 +28,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default CharactersPage;
